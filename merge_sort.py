@@ -1,16 +1,16 @@
-A=[2,4,1,6,8,5,3,7]
+A = [8,3,2,5,6,1,7,4,9]
+A1 = [2,3,8,5]
+A2 = [1,4,6,7,9]
+print(A)
 
-A1 = [1,2,4,6]
-
-A2 = [3,5,7,8]
+i = j = k = 0
 
 m = len(A1)
 n = len(A2)
-i = j = k = 0
 
-while(i<m and j<n):
+while (i < m and j <n):
     if A1[i] < A2[j]:
-        A[k] =  A1[i]
+        A[k] = A1[i]
         i += 1
         k += 1
     else:
@@ -18,14 +18,14 @@ while(i<m and j<n):
         j += 1
         k += 1
 
-while(i<m):
+while (i < m):
     A[k] = A1[i]
     i += 1
     k += 1
 
-while(j<n):
+while (j < n):
     A[k] = A2[j]
-    k += 1
     j += 1
+    k += 1
 
 print(A)
