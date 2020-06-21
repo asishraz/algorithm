@@ -29,3 +29,8 @@ while (j < n):
     k += 1
 
 print(A)
+
+
+'''
+more algo
+'''
