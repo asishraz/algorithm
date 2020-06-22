@@ -31,6 +31,3 @@ while (j < n):
 print(A)
 
 
-'''
-more algo
-'''
