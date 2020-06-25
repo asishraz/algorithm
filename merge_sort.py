@@ -31,3 +31,6 @@ while (j < n):
 print(A)
 
 
+'''need to study more algo and need to study stack and other data structures"
+#and as well as algorithms
+'''
