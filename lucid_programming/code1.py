@@ -2,7 +2,7 @@ ls = [2,3,33,11,53,1,41,53,32,42,23,42,4,1,3,4,24,34,45,43]
 
 #if target is in the above list or not
 
-target = 44
+target = int(input("enter the number to check in the list: "))
 
 #linear search
 def linearSearch(ls,target):
@@ -11,11 +11,11 @@ def linearSearch(ls,target):
             print(str(target) + " is in the list ")
             return True
     return False
-##print(linearSearch(ls,target))
 
 
 
-#binary search
+
+#iterative binary search
 def binarySearch(ls,target):
     ls.sort()
     print(ls)
@@ -32,4 +32,20 @@ def binarySearch(ls,target):
     return False
 
 
-print(binarySearch(ls,target))
+
+#recursive binary search
+def recursiveBinarySearch(ls,target,low,high):
+    ls.sort()
+    if low > high:
+        return False
+    else:
+        mid = (low+high) // 2
+        if target == ls[mid]:
+            return True
+        elif target < ls[mid]:
+            return recursiveBinarySearch(ls,target,low,mid-1)
+        elif target > ls[mid]:
+            return recursiveBinarySearch(ls,target,mid+1,high)
+
+
+print(recursiveBinarySearch(ls,target,0,len(ls)-1))
